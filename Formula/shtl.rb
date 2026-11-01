@@ -5,24 +5,25 @@ class Shtl < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/bitmvr-industries/shtl/releases/download/v2.0.0/shtl-darwin-arm64.tar.gz"
-      sha256 "2f4e8a46fa14be61d9c5b23d4492cc408782c1630b4447d082778481548f0978"
+      url "https://github.com/bitmvr-industries/shtl/releases/download/v2.1.0/shtl-darwin-arm64.tar.gz"
+      sha256 "1d12032b93b5304bb8f4aae9ab1b42465e4731c216577c4dc16ba203c7b05f24"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/bitmvr-industries/shtl/releases/download/v2.0.0/shtl-linux-amd64.tar.gz"
-      sha256 "91993a1cef96a9fceda4c2dbd6caad9b4ad4b43c6ceb90c84ff4478e10951a3d"
+      url "https://github.com/bitmvr-industries/shtl/releases/download/v2.1.0/shtl-linux-amd64.tar.gz"
+      sha256 "083b38724b3646f3fa98cf178946423ea93bf6f502ae75c290bb6b9ecdd18835"
     end
     on_arm do
-      url "https://github.com/bitmvr-industries/shtl/releases/download/v2.0.0/shtl-linux-arm64.tar.gz"
-      sha256 "2c2d38d320e05667c3e64d7820b40dcd35432b9c3464a77dc7e8980f29c00cbf"
+      url "https://github.com/bitmvr-industries/shtl/releases/download/v2.1.0/shtl-linux-arm64.tar.gz"
+      sha256 "97c9539e6d795fed1894be05684eb017c55b8f844427c8cd0cd7a4add4c3695f"
     end
   end
 
   def install
     bin.install "shtl"
+    man1.install "shtl.1"
   end
 
   def caveats
@@ -36,6 +37,7 @@ class Shtl < Formula
   test do
     ENV["XDG_CONFIG_HOME"] = testpath/"config"
     assert_equal version.to_s, shell_output("#{bin}/shtl version").strip
+    assert_path_exists man1/"shtl.1"
     system bin/"shtl", "add", "home", testpath
     assert_equal testpath.to_s, shell_output("#{bin}/shtl path home").strip
   end
