@@ -1,9 +1,26 @@
 class Shtl < Formula
   desc "Go to directories by short route names"
   homepage "https://github.com/bitmvr-industries/shtl"
-  url "https://github.com/bitmvr-industries/shtl/releases/download/v1.3.0/shtl"
-  sha256 "6fc2c2b5e7f0a059e3361d0ae5b42ff3d80a29996d6ade48b1ab9a4336063966"
+  version "2.0.0"
   license "MIT"
+
+  on_macos do
+    on_arm do
+      url "https://github.com/bitmvr-industries/shtl/releases/download/v2.0.0/shtl-darwin-arm64.tar.gz"
+      sha256 "2f4e8a46fa14be61d9c5b23d4492cc408782c1630b4447d082778481548f0978"
+    end
+  end
+
+  on_linux do
+    on_intel do
+      url "https://github.com/bitmvr-industries/shtl/releases/download/v2.0.0/shtl-linux-amd64.tar.gz"
+      sha256 "91993a1cef96a9fceda4c2dbd6caad9b4ad4b43c6ceb90c84ff4478e10951a3d"
+    end
+    on_arm do
+      url "https://github.com/bitmvr-industries/shtl/releases/download/v2.0.0/shtl-linux-arm64.tar.gz"
+      sha256 "2c2d38d320e05667c3e64d7820b40dcd35432b9c3464a77dc7e8980f29c00cbf"
+    end
+  end
 
   def install
     bin.install "shtl"
