@@ -1,7 +1,6 @@
 class Shtl < Formula
   desc "Go to directories by short route names"
   homepage "https://github.com/bitmvr-industries/shtl"
-  version "2.0.0"
   license "MIT"
 
   on_macos do
