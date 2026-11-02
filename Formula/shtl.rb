@@ -5,19 +5,19 @@ class Shtl < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/bitmvr-industries/shtl/releases/download/v2.1.0/shtl-darwin-arm64.tar.gz"
-      sha256 "1d12032b93b5304bb8f4aae9ab1b42465e4731c216577c4dc16ba203c7b05f24"
+      url "https://github.com/bitmvr-industries/shtl/releases/download/v2.1.1/shtl-darwin-arm64.tar.gz"
+      sha256 "5a8ec2fd12e7800ccfbb004b37baf259cf0d8c71d946546494180016b0872da6"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/bitmvr-industries/shtl/releases/download/v2.1.0/shtl-linux-amd64.tar.gz"
-      sha256 "083b38724b3646f3fa98cf178946423ea93bf6f502ae75c290bb6b9ecdd18835"
+      url "https://github.com/bitmvr-industries/shtl/releases/download/v2.1.1/shtl-linux-amd64.tar.gz"
+      sha256 "3c48391a0be2c7da451131304b167ba07430ba54c308524cea06fba17ca1a0ed"
     end
     on_arm do
-      url "https://github.com/bitmvr-industries/shtl/releases/download/v2.1.0/shtl-linux-arm64.tar.gz"
-      sha256 "97c9539e6d795fed1894be05684eb017c55b8f844427c8cd0cd7a4add4c3695f"
+      url "https://github.com/bitmvr-industries/shtl/releases/download/v2.1.1/shtl-linux-arm64.tar.gz"
+      sha256 "cbf4cf8e0a4cce21cfe8e14891dcdc5b491d582fe1e9e4562243b75df6c3bff0"
     end
   end
 
